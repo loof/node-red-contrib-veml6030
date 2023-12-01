@@ -50,7 +50,7 @@ module.exports = function (RED) {
                     data.model = node.type;
                     if (node.topic !== undefined && node.topic != "") _msg.topic = node.topic;
                     node.send(_msg);
-                    var sText = node.type + "[Valueº:" + Math.round(data.luxValue);
+                    var sText = node.type + "[Lux:" + Math.round(data.luxValue);
                     node.status({ fill: "green", shape: "dot", text: sText + "]" });
                 }).catch(function (err) {
                     node.status({ fill: "red", shape: "ring", text: "Sensor reading failed" });
