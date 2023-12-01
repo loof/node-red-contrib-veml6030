@@ -20,7 +20,7 @@
   ],
   "node-red": {
     "nodes": {
-      "BME280": "veml6030.js"
+      "VEML6030": "veml6030.js"
     }
   },
   "author": "Yves Peissard, ICT Berufsbildungscenter AG",
