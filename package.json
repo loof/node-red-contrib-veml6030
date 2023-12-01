@@ -1,0 +1,31 @@
+{
+  "name": "node-red-contrib-veml6030",
+  "version": "0.0.1",
+  "description": "Node for VEML6030 sensors for Raspberry Pi",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/loof/node-red-contrib-veml6030"
+  },
+  "keywords": [
+    "node-red",
+    "rpi",
+    "raspberry",
+    "sensor",
+    "sensors",
+    "ambient",
+    "light"
+  ],
+  "node-red": {
+    "nodes": {
+      "BME280": "veml6030.js"
+    }
+  },
+  "author": "Yves Peissard, ICT Berufsbildungscenter AG",
+  "license": "MIT",
+  "dependencies": {
+    "@cabinfo.eu/veml6030": "^1.0.4"
+  }
+}
