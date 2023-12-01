@@ -26,6 +26,7 @@
   "author": "Yves Peissard, ICT Berufsbildungscenter AG",
   "license": "MIT",
   "dependencies": {
-    "@cabinfo.eu/veml6030": "^1.0.4"
+    "@cabinfo.eu/veml6030": "^1.0.4",
+    "veml6030": "^1.0.1"
   }
 }
