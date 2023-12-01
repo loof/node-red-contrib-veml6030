@@ -17,7 +17,7 @@ module.exports = function (RED) {
         // init the sensor
         node.status({ fill: "grey", shape: "ring", text: "Init..." });
         node.log("Initializing on bus" + node.bus + " addr:" + node.addr);
-        node.sensor = new VEML6030({debug: true});
+        node.sensor = new VEML6030({debug: false});
         var fnInit= function() {
             node.sensor.init().then(function (ID) {
                 node.initialized = true;
@@ -61,7 +61,7 @@ module.exports = function (RED) {
             return null;
         });
 
-    } // Bme280
+    } // VEML6030
 
     RED.nodes.registerType("Veml6030", Veml6030);
 };

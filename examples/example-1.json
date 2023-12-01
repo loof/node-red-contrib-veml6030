@@ -1,0 +1,71 @@
+[
+    {
+        "id": "6ca631aff70e6ab8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "09c7145bc37d5635",
+        "type": "inject",
+        "z": "6ca631aff70e6ab8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 120,
+        "wires": [
+            [
+                "da29839cf4f683e7"
+            ]
+        ]
+    },
+    {
+        "id": "0563e9078603c359",
+        "type": "debug",
+        "z": "6ca631aff70e6ab8",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 540,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "da29839cf4f683e7",
+        "type": "Veml6030",
+        "z": "6ca631aff70e6ab8",
+        "name": "",
+        "bus": "1",
+        "address": "0x48",
+        "topic": "veml6030",
+        "x": 300,
+        "y": 120,
+        "wires": [
+            [
+                "0563e9078603c359"
+            ]
+        ]
+    }
+]
