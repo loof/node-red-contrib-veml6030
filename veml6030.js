@@ -45,10 +45,10 @@ module.exports = function (RED) {
             if (!node.initialized) {
                 node.send(_msg); // msg bypass
             } else {
-                node.sensor.readSensorData(true).then(function (data) {
+                node.sensor.readSensorData(false).then(function (data) {
                     _msg.payload = data;
                     data.model = node.type;
-                    if (node.topic !== undefined && node.topic != "") _msg.topic = node.topic;
+                    if (node.topic !== undefined && node.topic !== "") _msg.topic = node.topic;
                     node.send(_msg);
                     var sText = node.type + "[Lux:" + Math.round(data.luxValue);
                     node.status({ fill: "green", shape: "dot", text: sText + "]" });
